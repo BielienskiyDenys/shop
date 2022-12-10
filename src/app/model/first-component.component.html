@@ -1,0 +1,12 @@
+<div>
+    <h1>This is my first ng component. And it represents 'movie' entity.</h1>
+    <p>It has a name: <span>{{name}}</span></p>
+    <p>And a description: <span>{{description}}</span></p>
+    <p>We can say it belongs to genres: <span *ngFor="let genre of category">{{genre}}</span></p>
+    <p>Also it is worth something: <span>{{price}}</span></p>
+    <p *ngIf="isAvailable; else notAvailableTemplate"> And it is available right now!</p>
+</div>
+
+<ng-template #notAvailableTemplate>
+    <p>Sory, but now this movie is not available.</p>
+</ng-template>
