@@ -1,0 +1,11 @@
+<div class="first-component">
+    <p><strong>This is FirstComponent.</strong> Basically, it should represent 'movie' entity.</p>
+    <p>It has a name: <strong>{{name}}</strong></p>
+    <p>A description: <strong>{{description}}</strong></p>
+    <p>It has some price: <strong>{{price}}</strong></p>
+    <p>And some genres (categories) either: <strong *ngFor="let genre of category">{{genre.valueOf()}}; </strong></p>
+    <p *ngIf="isAvailable; then isAvaialbleForPurchase else isNotAvaialbleForPurchase"></p>
+</div>
+
+<ng-template #isAvaialbleForPurchase>And this movie <strong>is available</strong> right now!</ng-template>
+<ng-template #isNotAvaialbleForPurchase>But we are really sorry, the movie <strong>is not available</strong> right now.</ng-template>
