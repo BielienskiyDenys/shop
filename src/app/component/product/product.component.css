@@ -1,0 +1,28 @@
+.product {
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgb(42, 161, 183);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-button {
+    border: 1px solid rgb(42, 161, 183);
+    background-color: rgb(74, 178, 196);
+    color: black;
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    min-width: 100px;
+    width: 100%;
+    margin: auto 10px;
+}
+
+.main-button:hover {
+    border: 1px solid rgb(52, 122, 198);
+    background-color: rgb(74, 133, 196);
+    color: black;
+    font-weight: bold;
+    transition: 500ms;
+}

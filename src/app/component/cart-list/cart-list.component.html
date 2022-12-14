@@ -1,0 +1,21 @@
+<div>
+    <div (click)="reloadCart()">
+        Refresh!
+    </div>
+
+    <div (click)="clearCart()">
+        Clear Cart!
+    </div>
+
+    <p *ngIf="isCartEmpty(); then emptyCartTemplate else fullCartTemplate"></p>
+
+</div>
+
+<ng-template #emptyCartTemplate>Sorry, nothing in cart yet. Buy something. Please.</ng-template>
+<ng-template #fullCartTemplate>
+    <p>Your cart now contains:</p>
+    <div *ngFor="let cartItem of cartItems; trackBy: trackByProductId">
+            <p>Name: </p><span>{{cartItem.name}}</span>
+            <p>Price: </p><span>{{cartItem.price}}</span>
+    </div>
+</ng-template>
